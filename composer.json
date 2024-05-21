@@ -1,0 +1,17 @@
+{
+    "name": "tng-n/convert-to-webp",
+    "description": "convert image to webp",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Nikolay Solovev",
+            "email": "solovev.n.v@mail.ru"
+        }
+    ],
+    "require": {
+    }
+}
