@@ -13,5 +13,7 @@
         }
     ],
     "require": {
+        "ext-exif": "*",
+        "ext-gd": "*"
     }
 }
