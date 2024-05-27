@@ -6,7 +6,11 @@ $fileName = uniqid() . "." . $ext;
 
 $outputDir = "../Storage/webp/";
 if (!is_dir($outputDir)) {
-    mkdir($outputDir, 0777, true);
+    try {
+        mkdir($outputDir, 0777, true);
+    } catch (Exception $e) {
+        echo $e->getMessage();
+    }
 }
 $outputFile = $outputDir . $fileName;
 
@@ -42,8 +46,11 @@ switch ($fileType) {
 }
 
 try {
-    imagewebp( $image, $outputFile,80);
+    if(imagejpeg($image, $outputFile, 80)) {
     echo "success";
+    }else {
+        echo "failed";
+    }
 } catch (Exception $e) {
     echo "Error: " . $e->getMessage();
 } finally {
