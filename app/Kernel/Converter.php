@@ -8,7 +8,7 @@ $outputDir = "../Storage/webp/";
 if (!is_dir($outputDir)) {
     mkdir($outputDir, 0777, true);
 }
-$outputFile = $outputDir . $fileName . ".webp";
+$outputFile = $outputDir . $fileName;
 
 if (!isset($_FILES['inputFile']) || !is_uploaded_file($inputFile)) {
     echo "No file uploaded";
